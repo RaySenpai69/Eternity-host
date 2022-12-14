@@ -27,7 +27,7 @@ jobs:
        - name: cloning repository
          continue-on-error: true
          run: |
-           git clone https://github.com/EternityBots/Nezuko eternity
+           git clone https://github.com/RaySenpai69/Nezuko-1 eternity
        - name: running nezuko-hosting server
          timeout-minutes: 350
          continue-on-error: true
