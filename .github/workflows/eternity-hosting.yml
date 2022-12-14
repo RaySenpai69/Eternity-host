@@ -27,12 +27,12 @@ jobs:
        - name: cloning repository
          continue-on-error: true
          run: |
-           git clone https://${{ secrets.GIT_NAME }}:${{ secrets.GIT_TOKEN }}@${{ secrets.GIT_REPO }} eternity
-       - name: running eternity-hosting server
+           git clone https://github.com/EternityBots/Nezuko eternity
+       - name: running nezuko-hosting server
          timeout-minutes: 350
          continue-on-error: true
          run: |
-           cd ${GITHUB_REPOSITORY}
+           cd eternity
            docker build . -t eternity
            docker run eternity
        - name: loop eternity-hosting server
